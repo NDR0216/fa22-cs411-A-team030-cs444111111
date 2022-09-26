@@ -6,13 +6,13 @@
 | -------- | --------------------- |
 | TeamID   | Team-030              |
 | TeamName | cs444111111           |
-| Captain  |                       |
+| Captain  | Nanxi Shan                      |
 | Captain  | nanxis2@illinois.edu  |
-| Member1  |                       |
+| Member1  | Tianhong Yin                      |
 | Member1  | tyin7@illinois.edu    |
-| Member2  |                       |
+| Member2  | Ander Liu                      |
 | Member2  | anderdl2@illinois.edu |
-| Member3  |                       |
+| Member3  | Elle Zhang                      |
 | Member3  | yimuz2@illinois.edu   |
 
 ## Project Information

@@ -1,0 +1,18 @@
+<h1>Update User Information</h1>
+
+<form action="../update_post/{{ queryset.user_id }}" method="post">
+  {% csrf_token %}
+  User Name:<br>
+  <input name="user_id" value="{{ queryset.user_id }}">
+  <br><br>
+  Email:<br>
+  <input name="email" value="{{ queryset.email }}">
+  <br><br>
+  Phone number:<br>
+  <input name="phone_number" value="{{ queryset.phone_number }}">
+  <br><br>
+  Password:<br>
+  <input name="password" value="{{ queryset.password }}"> 
+  <br><br>
+  <input type="submit" value="Submit">
+</form>

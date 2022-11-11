@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <h1>Popular Vegan Recipe Videos</h1>
+    <h2>SELECT *<br>
+      FROM (SELECT * FROM workout.Recipe_Video WHERE video_viewCount > 100000) AS rv NATURAL JOIN (SELECT * FROM workout.Channels WHERE subscriberCount > 1000000) AS ch<br>  
+      WHERE video_title LIKE "%vegan%";
+    </h2>
+
+    <table border="1">
+      <tr>
+        <th>Title</th>
+        <th>Duration</th>
+        <th>Publish Date</th>
+        <th>View Count</th>
+        <th>Like Count</th>
+      </tr>
+      {% for x in queryset %}
+      <tr>
+        <td><a href="https://www.youtube.com/watch?v={{ x.video_id}}">{{ x.video_title}}</a></td>
+        <td>{{ x.duration}}</td>
+        <td>{{ x.publish_date}}</td>
+        <td>{{ x.video_viewCount}}</td>
+        <td>{{ x.likeCount}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <h1>Video Search</h1>
+
+    <form href="." method="post">
+        {% csrf_token %}
+        Keyword:<br>
+        <input name="keyword">
+        <input type="submit" value="Submit">
+    </form>
+
+    <table border="1">
+      <h2>Results</h2>
+      <tr>
+        <th>Title</th>
+        <th>Duration</th>
+        <th>Trainer</th>
+        <th>Publish Date</th>
+        <th>View Count</th>
+        <th>Like Count</th>
+      </tr>
+      {% for x in queryset %}
+      <tr>
+        <td><a href="https://www.youtube.com/watch?v={{ x.video_id}}">{{ x.video_title}}</a></td>
+        <td>{{ x.duration}}</td>
+        <td>{{ x.trainer}}</td>
+        <td>{{ x.publish_date}}</td>
+        <td>{{ x.video_viewCount}}</td>
+        <td>{{ x.likeCount}}</td>
+      </tr>
+      {% endfor %}}
+    </table>
+
+    <p>status: {{status}}</p>
+    <p>error: {{error}}</p>
+  </body>
+</html>

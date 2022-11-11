@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <h1>User Infomation</h1>
+
+    <table border="1">
+      <tr>
+        <th>User ID</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Password</th>
+      </tr>
+      {% for x in queryset %}
+      <tr>
+        <td><a href="./update/{{ x.user_id }}">{{ x.user_id }}</a></td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone_number }}</td>
+        <td>{{ x.password }}</td>
+        <td><a href="./delete/{{ x.user_id }}">delete</a>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <p>
+      <a href="./add/">Add new user</a>
+    </p>
+  </body>
+</html>

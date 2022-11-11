@@ -20,7 +20,7 @@ CREATE TABLE Workout_Video_Trainer(
 	video_viewCount INT NOT NULL,
 	likeCount INT NOT NULL,
 	trainer VARCHAR(255),
-	PRIMARY KEY (video_id, channel_id),
+	PRIMARY KEY (video_id),
 	FOREIGN KEY(channel_id) REFERENCES Channels(channel_id) ON DELETE CASCADE);
 
 CREATE TABLE Workout_Video_Type(
@@ -32,7 +32,7 @@ CREATE TABLE Workout_Video_Type(
 	video_viewCount INT NOT NULL,
 	likeCount INT NOT NULL,
 	workout_type VARCHAR(255) NOT NULL,
-	PRIMARY KEY (video_id, channel_id),
+	PRIMARY KEY (video_id),
 	FOREIGN KEY (channel_id) REFERENCES Channels(channel_id) ON DELETE CASCADE);
     
 CREATE TABLE Recipe_Video(
@@ -43,5 +43,5 @@ CREATE TABLE Recipe_Video(
 	duration VARCHAR(255) NOT NULL,
 	video_viewCount INT NOT NULL,
 	likeCount INT NOT NULL,
-	PRIMARY KEY (video_id, channel_id),
+	PRIMARY KEY (video_id),
 	FOREIGN KEY(channel_id) REFERENCES Channels(channel_id) ON DELETE CASCADE);

@@ -60,7 +60,6 @@ class User_Information(models.Model):
 class Forum(models.Model):
     post_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User_Information, on_delete=models.CASCADE)
-    post_timestamp = models.CharField(max_length=255)
     post_title = models.CharField(max_length=255)
     post_content = models.CharField(max_length=255)
 
